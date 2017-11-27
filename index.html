@@ -3,13 +3,10 @@
 
   <head>
       <title>RPS Game</title>
-      <!-- Link CSS here -->
-      
-      <!-- Link JQuery here -->
-      
-      <!-- Link Javascript File here -->
-      
-      <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       
   </head>
 
@@ -23,12 +20,25 @@
         6. Add a div to record the Winner.
      -->
     <div class="container text-center">
-    
+      <h1>Rock, Paper, Scissors!</h1>
       
+      <h4>Rock beats scissors, scissors beats paper, and paper beats rock! In order to win the game, you must defeat your opponent by taking advantage of their weakness!</h4>
+      
+      <img id="rpsImage" src="http://i.imgur.com/qbHME84.png" />
+      
+      <h4 id="choice">Your Choice:</h4>
 
-
-    
+      <input>
+      
+      <button id="button">Go!</button>
+      
+      <div class="row">
+      <h4 id="userInput" class="col-xs-6">User's Input:</h4>
+      
+      <h4 id="compInput" class="col-xs-6">Computer's Input:</h4>
+      </div>
     </div>
+    
 
   </body>
 

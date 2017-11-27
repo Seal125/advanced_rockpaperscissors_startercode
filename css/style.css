@@ -1,1 +1,24 @@
+#rpsImage {
+    height: 300px;
+    width: 800px;
+    background-color: white;
+}
+
+#button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+#userInput {
+    text-align: left;
+}
+
+#compInput {
+    text-align: right;
+}
+
+body {
+    background-color: #8AF01D;
+}
 
