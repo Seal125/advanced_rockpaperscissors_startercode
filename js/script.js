@@ -1,3 +1,4 @@
+$(document).ready(function() {
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project
@@ -35,3 +36,11 @@ var computerChoice = "";
 var winner = "";
 
 var choices = ["rock", "paper", "scissors"];
+
+$("#button").click(function() {
+        userChoice = $("#inp").val();
+        $("#inputBox1").text(userChoice);
+});
+
+
+});
