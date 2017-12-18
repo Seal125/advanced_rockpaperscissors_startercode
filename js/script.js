@@ -31,17 +31,15 @@ $(document).ready(function() {
 
 var userChoice = "";
 
-var ComputerChoice = "";
-
 var computerChoice = Math.random();
 
 var winner = "";
 
 var choices = ["rock", "paper", "scissors"];
 
-if (computerChoice > '0' && computerChoice < '0.33') {
+if (computerChoice >= 0 && computerChoice < 1/3) {
         computerChoice = "rock";
-} else if (computerChoice > '0.34' && computerChoice < '0.66') {
+} else if (computerChoice >= 1/3 && computerChoice < 2/3) {
         computerChoice = 'paper';
 } else {
         computerChoice = 'scissors';
