@@ -31,11 +31,21 @@ $(document).ready(function() {
 
 var userChoice = "";
 
-var computerChoice = "";
+var ComputerChoice = "";
+
+var computerChoice = Math.random();
 
 var winner = "";
 
 var choices = ["rock", "paper", "scissors"];
+
+if (computerChoice > '0' && computerChoice < '0.33') {
+        computerChoice = "rock";
+} else if (computerChoice > '0.34' && computerChoice < '0.66') {
+        computerChoice = 'paper';
+} else {
+        computerChoice = 'scissors';
+}
 
 $("#button").click(function() {
         userChoice = $("#inp").val();
