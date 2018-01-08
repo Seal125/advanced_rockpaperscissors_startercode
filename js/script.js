@@ -28,27 +28,61 @@ $(document).ready(function() {
 
 
 // DOCUMENT READY FUNCTION
-
 var userChoice = "";
 
-var computerChoice = Math.random();
+var computerChoice = null;
 
-var winner = "";
+var result = null;
+
+function getRandomChoice() {
 
 var choices = ["rock", "paper", "scissors"];
 
-if (computerChoice >= 0 && computerChoice < 1/3) {
-        computerChoice = "rock";
-} else if (computerChoice >= 1/3 && computerChoice < 2/3) {
-        computerChoice = 'paper';
-} else {
-        computerChoice = 'scissors';
+var randomIndex = Math.floor(Math.random() * choices.length);
+
+var randomChoices = choices[randomIndex];
+    
+return randomChoices;
 }
 
+
 $("#button").click(function() {
-        userChoice = $("#inp").val();
-        $("#inputBox1").text(userChoice);
+    userChoice = $("#inp").val();
+    $("#inputBox1").text(userChoice);
+    computerChoice = getRandomChoice();
+    $("#inputBox2").text(computerChoice);
+    result = selectWinner(userChoice, computerChoice);
+    $("#resultBox").text(result);
 });
 
+function selectWinner(userChoice, computerChoice) {
+    if (userChoice === "rock") {
+        if (computerChoice === "rock") {
+            return "Computer wins!";
+        } else if (computerChoice === "paper") {
+            return "User wins!";
+        } else {
+            return "It's a tie!";
+        }
+    }
+    if (userChoice === "paper") {
+        if (computerChoice === "rock") {
+            return "User wins!";
+        }else if (computerChoice === "paper") {
+            return "It's a tie!";
+        }else {
+            return "Computer wins!";
+        }
+    }
+    if (userChoice === "scissors"){
+        if (computerChoice === "rock"){
+            return "Computer wins!";
+        }else if (computerChoice === "paper") {
+            return "User wins!";
+        }else {
+            return "It's a tie!";
+        }
+    }
+}
 
 });
