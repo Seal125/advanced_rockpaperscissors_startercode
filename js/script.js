@@ -58,11 +58,11 @@ $("#button").click(function() {
 function selectWinner(userChoice, computerChoice) {
     if (userChoice === "rock") {
         if (computerChoice === "rock") {
-            return "Computer wins!";
-        } else if (computerChoice === "paper") {
-            return "User wins!";
-        } else {
             return "It's a tie!";
+        } else if (computerChoice === "paper") {
+            return "Computer wins!";
+        } else {
+            return "User wins!";
         }
     }
     if (userChoice === "paper") {
